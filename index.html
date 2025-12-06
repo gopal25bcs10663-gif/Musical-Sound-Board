@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Musical Soundboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-wrap">
+  <div class="card">
+    <header class="card-head">
+      <h1>🎵 Musical Soundboard</h1>
+      <p class="sub">Click a bar or press keys: P D G T F V. Space = pause/resume.</p>
+    </header>
+    <main class="card-body">
+      <section class="left">
+        <div class="board" id="board">
+          <button class="btn" data-sound="piano" data-key="P">🎹 Piano <span class="key">P</span></button>
+          <button class="btn" data-sound="drum" data-key="D">🥁 Drum <span class="key">D</span></button>
+          <button class="btn" data-sound="guitar" data-key="G">🎸 Guitar <span class="key">G</span></button>
+          <button class="btn" data-sound="trumpet" data-key="T">🎺 Trumpet <span class="key">T</span></button>
+          <button class="btn" data-sound="flute" data-key="F">🎶 Flute <span class="key">F</span></button>
+          <button class="btn" data-sound="violin" data-key="V">🎻 Violin <span class="key">V</span></button>
+        </div>
+      </section>
+      <aside class="right">
+        <div class="controls">
+          <div class="volume-row">
+            <label class="vol-label">🔊</label>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1" />
+            <button id="muteBtn">🔇</button>
+          </div>
+          <div class="visual-card">
+            <canvas id="wave"></canvas>
+            <div class="time-row">
+              <div id="current">0:00</div>
+              <div id="duration">0:00</div>
+            </div>
+            <div id="progressWrap">
+              <div id="progress"></div>
+            </div>
+            <div class="hint">Waveform & progress</div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="card-foot">
+      <small>College project • Responsive • Keyboard: P D G T F V</small>
+    </footer>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
